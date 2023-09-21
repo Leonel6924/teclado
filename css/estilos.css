@@ -1,0 +1,86 @@
+:root {
+  --cinza: rgb(174, 3, 34);
+  --vermelha: rgb(137, 16, 50);
+  --vermelha-escura: #511;
+  --branca: #322;
+  --luz: rgb(255, 76, 76);
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(45deg, rgb(243, 40, 22) 0%,rgba(1, 1, 1, 0.995) 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--branca);
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight:900;
+  text-decoration:underline;
+  background:radial-gradient(#faa 0%, rgb(202, 66, 54) 100%);
+  border-radius:100px;
+  padding:6px;
+  border-right:20px double rgba(1, 1, 1, 0.995);   border-top:5px double rgba(1, 1, 1, 0.995);   border-left:12px double  rgba(1, 1, 1, 0.995);   border-bottom:8px double  rgba(1, 1, 1, 0.995);
+
+
+
+}
+
+.teclado {
+  background: linear-gradient(to bottom, #751d1d 0%,#ccc 100%);
+  box-shadow: 6px 8px 0 6px #333, 10px 10px 10px #000;
+  border-radius: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px
+}
+.teclados {
+  background: linear-gradient(to bottom, #751d1d 0%,#ccc 100%);
+  box-shadow: 6px 8px 0 6px #333, 10px 10px 10px #000;
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px
+   
+}
+
+.tecla {
+  background-color: var(--branca);
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 var(--cinza);
+  color: var(--vermelha);
+  cursor: pointer;
+  height: 150px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 300px;
+}
+
+.tecla.ativa,
+.tecla:active {
+  background-color: var(--vermelha);
+  border: 4px solid  var(--vermelha);
+  box-shadow: 6px 6px 0 var(--vermelha-escura) inset;
+  color: var(--branca);
+  outline: none;
+}
+
+.tecla.focus,
+.tecla:focus {
+  outline:var(--luz);
+  box-shadow: 4px 4px 12px var(--luz);
+}
+
+.tecla.active:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+}
